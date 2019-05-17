@@ -33,7 +33,7 @@ public class JerseyConfig extends ResourceConfig {
 
     BeanConfig swaggerConfigBean = new BeanConfig();
     swaggerConfigBean.setConfigId("Swagger Client API");
-    swaggerConfigBean.setTitle("Using Swagger,Jersey And Spring Boot ");
+    swaggerConfigBean.setTitle("Using Swagger, Jersey And Spring Boot ");
     swaggerConfigBean.setVersion("v1");
     swaggerConfigBean.setContact("Epsi");
     swaggerConfigBean.setSchemes(new String[] { "http"});

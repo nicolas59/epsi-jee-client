@@ -63,4 +63,9 @@ public class ClientService {
   public void deleteClient(Long clientId) {
 
   }
+  
+  
+  public ClientDTO getClient(String login, String password) {
+      return null;
+  }
 }

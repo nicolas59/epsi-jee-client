@@ -1,7 +1,10 @@
 logging:
    level:
       root: infog
-   
+
+server:
+   port: 8090
+
 spring:
    datasource:
       url: jdbc:h2:file:../test.db
@@ -15,4 +18,4 @@ spring:
    h2:
       console: 
          enabled: true
-         path: /h2
+         path: /console

@@ -4,95 +4,126 @@ import java.util.Date;
 
 public class ClientDTO {
 
-  private Long id;
-  
-  private String civilite;
-  
-  private String nom;
-  
-  private String prenom;
-  
-  private Date dateNaissance;
-  
-  private AdresseDTO adresseDomicile;
-  
-  private AdresseDTO adresseLivraison;
-  
-  private Date dernierModification;
-  
-  private Date dateCreation;
+    private Long id;
 
-  public Long getId() {
-    return id;
-  }
+    private String civilite;
 
-  public void setId(Long id) {
-    this.id = id;
-  }
+    private String nom;
 
-  public String getCivilite() {
-    return civilite;
-  }
+    private String prenom;
 
-  public void setCivilite(String civilite) {
-    this.civilite = civilite;
-  }
+    private Date dateNaissance;
 
-  public String getNom() {
-    return nom;
-  }
+    private AdresseDTO adresseDomicile;
 
-  public void setNom(String nom) {
-    this.nom = nom;
-  }
+    private AdresseDTO adresseLivraison;
 
-  public String getPrenom() {
-    return prenom;
-  }
+    private Date dernierModification;
 
-  public void setPrenom(String prenom) {
-    this.prenom = prenom;
-  }
+    private Date dateCreation;
 
-  public Date getDateNaissance() {
-    return dateNaissance;
-  }
+    private String email;
 
-  public void setDateNaissance(Date dateNaissance) {
-    this.dateNaissance = dateNaissance;
-  }
+    private String motDePasse;
 
-  public AdresseDTO getAdresseDomicile() {
-    return adresseDomicile;
-  }
+    public Long getId() {
+        return id;
+    }
 
-  public void setAdresseDomicile(AdresseDTO adresseDomicile) {
-    this.adresseDomicile = adresseDomicile;
-  }
+    public void setId(Long id) {
+        this.id = id;
+    }
 
-  public AdresseDTO getAdresseLivraison() {
-    return adresseLivraison;
-  }
+    public String getCivilite() {
+        return civilite;
+    }
 
-  public void setAdresseLivraison(AdresseDTO adresseLivraison) {
-    this.adresseLivraison = adresseLivraison;
-  }
+    public void setCivilite(String civilite) {
+        this.civilite = civilite;
+    }
 
-  public Date getDernierModification() {
-    return dernierModification;
-  }
+    public String getNom() {
+        return nom;
+    }
 
-  public void setDernierModification(Date dernierModification) {
-    this.dernierModification = dernierModification;
-  }
+    public void setNom(String nom) {
+        this.nom = nom;
+    }
 
-  public Date getDateCreation() {
-    return dateCreation;
-  }
+    public String getPrenom() {
+        return prenom;
+    }
 
-  public void setDateCreation(Date dateCreation) {
-    this.dateCreation = dateCreation;
-  }
-  
-  
+    public void setPrenom(String prenom) {
+        this.prenom = prenom;
+    }
+
+    public Date getDateNaissance() {
+        return dateNaissance;
+    }
+
+    public void setDateNaissance(Date dateNaissance) {
+        this.dateNaissance = dateNaissance;
+    }
+
+    public AdresseDTO getAdresseDomicile() {
+        return adresseDomicile;
+    }
+
+    public void setAdresseDomicile(AdresseDTO adresseDomicile) {
+        this.adresseDomicile = adresseDomicile;
+    }
+
+    public AdresseDTO getAdresseLivraison() {
+        return adresseLivraison;
+    }
+
+    public void setAdresseLivraison(AdresseDTO adresseLivraison) {
+        this.adresseLivraison = adresseLivraison;
+    }
+
+    public Date getDernierModification() {
+        return dernierModification;
+    }
+
+    public void setDernierModification(Date dernierModification) {
+        this.dernierModification = dernierModification;
+    }
+
+    public Date getDateCreation() {
+        return dateCreation;
+    }
+
+    public void setDateCreation(Date dateCreation) {
+        this.dateCreation = dateCreation;
+    }
+
+    /**
+     * @return the email
+     */
+    public String getEmail() {
+        return email;
+    }
+
+    /**
+     * @param email the email to set
+     */
+    public void setEmail(String email) {
+        this.email = email;
+    }
+
+    /**
+     * @return the motDePasse
+     */
+    public String getMotDePasse() {
+        return motDePasse;
+    }
+
+    /**
+     * @param motDePasse the motDePasse to set
+     */
+    public void setMotDePasse(String motDePasse) {
+        this.motDePasse = motDePasse;
+    }
+
 }

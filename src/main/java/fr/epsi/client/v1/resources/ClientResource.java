@@ -3,14 +3,16 @@ package fr.epsi.client.v1.resources;
 import java.util.Collection;
 
 import javax.validation.Valid;
-import javax.ws.rs.PathParam;
+
+import org.springframework.stereotype.Component;
 
 import fr.epsi.client.v1.dto.ClientDTO;
 import fr.epsi.client.v1.service.ClientService;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
-import io.swagger.annotations.ApiParam;
 
+
+@Component
 @Api(value = "Client", produces = "application/json")
 public class ClientResource {
 
@@ -23,8 +25,20 @@ public class ClientResource {
    * @return
    */
   @ApiOperation(value="Permet de reécuperer le client par son id", httpMethod="GET")
-  public ClientDTO getClient(@ApiParam(name="id") @PathParam("id" )Long clientId) {
+  public ClientDTO getClient(Long clientId) {
     return clientService.getClient(clientId);
+  }
+  
+  /**
+   * Permet de récupérer un client à partir de son login et mot de passe.
+   * 
+   * @param login
+   * @param motDePasse
+   * @return
+   */
+  //TODO Permet d'authentifier le client    
+  public ClientDTO getClient(String login, String motDePasse) {
+      return null;
   }
 
   /**

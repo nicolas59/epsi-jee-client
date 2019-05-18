@@ -1,10 +1,17 @@
 package fr.epsi.client.entity;
 
+import java.io.Serializable;
 import java.util.Date;
 import java.util.List;
 
-public class Client {
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.persistence.OneToMany;
 
+@Entity
+public class Client implements Serializable{
+
+    @Id
     private Long id;
 
     private String civilite;
@@ -23,6 +30,7 @@ public class Client {
 
     private String motDePasse;
     
+    @OneToMany(mappedBy="client")
     private List<Adresse> adresses;
 
     /**

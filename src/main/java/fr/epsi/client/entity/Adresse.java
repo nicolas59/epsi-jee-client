@@ -1,11 +1,19 @@
 package fr.epsi.client.entity;
 
+import javax.persistence.Entity;
+import javax.persistence.EnumType;
+import javax.persistence.Enumerated;
+import javax.persistence.Id;
+import javax.persistence.ManyToOne;
+
+@Entity
 public class Adresse {
     
     public enum Type {
-        DOMICILE, LIVRAISON
+        DOMICILE, FACTURATION, LIVRAISON
     }
     
+    @Id
     private Long id;
 
     private String numero;
@@ -18,8 +26,10 @@ public class Adresse {
 
     private String ville;
 
+    @ManyToOne
     private Client client;
     
+    @Enumerated(EnumType.STRING)
     private Type type;
 
     /**

@@ -23,11 +23,13 @@ public class ClientDTOValidateur {
   @Test
   public void should_get_violations() {
     ClientDTO client = new ClientDTO();
-    //client.setCivilite("Mr");
+    // client.setCivilite("Mr");
     Calendar cal = Calendar.getInstance();
     cal.set(Calendar.YEAR, cal.get(Calendar.YEAR) - 20);
 
     client.setDateNaissance(cal.getTime());
+
+    client.setCivilite("Me");
 
     Validator validator = Validation.buildDefaultValidatorFactory()
       .getValidator();
@@ -39,14 +41,24 @@ public class ClientDTOValidateur {
       .map(ConstraintViolation::getMessage)
       .map(String::trim)
       .collect(toList());
-    assertThat(messages).contains("La civilité doit être renseignée");
     assertThat(messages).contains("La civilité doit être Mr ou MME");
 
+    client.setCivilite(null);
+    violations = validator.validate(client);
+
+    assertThat(violations.size()).isNotZero();
+
+    messages = violations.stream()
+      .map(ConstraintViolation::getMessage)
+      .map(String::trim)
+      .collect(toList());
+    
     assertThat(messages).contains("La civilité doit être renseignée");
     assertThat(messages).contains("Le nom est obligatoire");
     assertThat(messages).contains("Le prenom est obligatoire");
     assertThat(messages).contains("La date de naissance est obligatoire");
     assertThat(messages).contains("L'adresse domicile est obligatoire");
+
   }
 
   @Test
@@ -103,7 +115,7 @@ public class ClientDTOValidateur {
       .collect(toList());
     assertThat(messages).contains("Vous devez être majeur");
   }
-  
+
   @Test
   public void should_not_get_violation_when_client_is_majeur() {
     ClientDTO client = new ClientDTO();

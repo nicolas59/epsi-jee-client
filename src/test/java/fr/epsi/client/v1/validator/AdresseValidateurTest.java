@@ -33,7 +33,6 @@ public class AdresseValidateurTest {
         assertThat(messages).contains("Le numéro doit être renseigné");
         assertThat(messages).contains("La voie doit être renseignée");
         assertThat(messages).contains("Le code postal est obligatoire");
-        assertThat(messages).contains("La date de naissance est obligatoire");
         assertThat(messages).contains("La ville est obligatoire");
     }
     
